@@ -27,36 +27,36 @@
         <td><button class="btn btn-secondary">%</button></td>
         <td><button class="btn btn-secondary" @onclick="clickCE">CE</button></td>
         <td><button class="btn btn-secondary">C</button></td>
-        <td><button class="btn btn-secondary">&lArr;</button></td>
+        <td><button class="btn btn-secondary" @onclick="vissza">&lArr;</button></td>
     </tr>
     <tr>
-        <td><button class="btn btn-secondary">1/x</button></td>
-        <td><button class="btn btn-secondary">x*x</button></td>
-        <td><button class="btn btn-secondary">sqrt(x)</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>unaris(Unaris.EgyPerX)">1/x</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>unaris(Unaris.XNegyzet)">x*x</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>unaris(Unaris.GyokX)">sqrt(x)</button></td>
         <td><button class="btn btn-secondary">/</button></td>
     </tr>
     <tr>
-        <td><button class="btn btn-secondary">7</button></td>
-        <td><button class="btn btn-secondary">8</button></td>
-        <td><button class="btn btn-secondary">9</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_7)">7</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_8)">8</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_9)">9</button></td>
         <td><button class="btn btn-secondary">x</button></td>
     </tr>
     <tr>
-        <td><button class="btn btn-secondary">4</button></td>
-        <td><button class="btn btn-secondary">5</button></td>
-        <td><button class="btn btn-secondary">6</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_4)">4</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_5)">5</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_6)">6</button></td>
         <td><button class="btn btn-secondary">-</button></td>
     </tr>
     <tr>
-        <td><button class="btn btn-secondary">1</button></td>
-        <td><button class="btn btn-secondary">2</button></td>
-        <td><button class="btn btn-secondary">3</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_1)">1</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_2)">2</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_3)">3</button></td>
         <td><button class="btn btn-secondary">+</button></td>
     </tr>
     <tr>
-        <td><button class="btn btn-secondary">+/-</button></td>
-        <td><button class="btn btn-secondary">0</button></td>
-        <td><button class="btn btn-secondary">.</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>unaris(Unaris.Negacio)">+/-</button></td>
+        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_0)">0</button></td>
+        <td><button class="btn btn-secondary" @onclick="tizedes">.</button></td>
         <td><button class="btn btn-secondary">=</button></td>
     </tr>
 </table>
@@ -68,5 +68,20 @@
     {
         _gep.CE();
     }
-
+    private void szamjegy(Szamjegyek sz)
+    {
+        _gep.Be(sz);
+    }
+    private void unaris(Unaris op)
+    {
+        _gep.Be(op);
+    }
+    private void tizedes()
+    {
+        _gep.Tizedes();
+    }
+    private void vissza()
+    {
+        _gep.Vissza();
+    }
 }
