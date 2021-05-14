@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Szamologep.Tests", "Szamolo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Szamologep.Lib", "Szamologep.Lib\Szamologep.Lib.csproj", "{09B4AEA1-74B9-4894-8BC6-BE069DB13701}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bongeszoben", "Bongeszoben\Bongeszoben.csproj", "{78CE12B2-5763-406F-878A-6AFB065B87CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bongeszoben", "Bongeszoben\Bongeszoben.csproj", "{78CE12B2-5763-406F-878A-6AFB065B87CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
