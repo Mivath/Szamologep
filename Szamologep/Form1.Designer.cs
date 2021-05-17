@@ -48,11 +48,11 @@ namespace Szamologep
             this.bEgyPerX = new System.Windows.Forms.Button();
             this.bXNegyzet = new System.Windows.Forms.Button();
             this.bGyokX = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.bOsztas = new System.Windows.Forms.Button();
+            this.bSzorzas = new System.Windows.Forms.Button();
+            this.bKivonas = new System.Windows.Forms.Button();
+            this.bOsszeadas = new System.Windows.Forms.Button();
+            this.bEgyenlo = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtErtek = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -266,60 +266,60 @@ namespace Szamologep
             this.bGyokX.UseVisualStyleBackColor = true;
             this.bGyokX.Click += new System.EventHandler(this.bGyokX_Click);
             // 
-            // button20
+            // bOsztas
             // 
-            this.button20.Enabled = false;
-            this.button20.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button20.Location = new System.Drawing.Point(255, 327);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 41);
-            this.button20.TabIndex = 19;
-            this.button20.Text = "/";
-            this.button20.UseVisualStyleBackColor = true;
+            this.bOsztas.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bOsztas.Location = new System.Drawing.Point(255, 327);
+            this.bOsztas.Name = "bOsztas";
+            this.bOsztas.Size = new System.Drawing.Size(75, 41);
+            this.bOsztas.TabIndex = 19;
+            this.bOsztas.Text = "/";
+            this.bOsztas.UseVisualStyleBackColor = true;
+            this.bOsztas.Click += new System.EventHandler(this.bOsztas_Click);
             // 
-            // button21
+            // bSzorzas
             // 
-            this.button21.Enabled = false;
-            this.button21.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button21.Location = new System.Drawing.Point(255, 374);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 41);
-            this.button21.TabIndex = 20;
-            this.button21.Text = "x";
-            this.button21.UseVisualStyleBackColor = true;
+            this.bSzorzas.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bSzorzas.Location = new System.Drawing.Point(255, 374);
+            this.bSzorzas.Name = "bSzorzas";
+            this.bSzorzas.Size = new System.Drawing.Size(75, 41);
+            this.bSzorzas.TabIndex = 20;
+            this.bSzorzas.Text = "x";
+            this.bSzorzas.UseVisualStyleBackColor = true;
+            this.bSzorzas.Click += new System.EventHandler(this.bSzorzas_Click);
             // 
-            // button22
+            // bKivonas
             // 
-            this.button22.Enabled = false;
-            this.button22.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button22.Location = new System.Drawing.Point(255, 421);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 41);
-            this.button22.TabIndex = 21;
-            this.button22.Text = "-";
-            this.button22.UseVisualStyleBackColor = true;
+            this.bKivonas.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bKivonas.Location = new System.Drawing.Point(255, 421);
+            this.bKivonas.Name = "bKivonas";
+            this.bKivonas.Size = new System.Drawing.Size(75, 41);
+            this.bKivonas.TabIndex = 21;
+            this.bKivonas.Text = "-";
+            this.bKivonas.UseVisualStyleBackColor = true;
+            this.bKivonas.Click += new System.EventHandler(this.bKivonas_Click);
             // 
-            // button23
+            // bOsszeadas
             // 
-            this.button23.Enabled = false;
-            this.button23.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button23.Location = new System.Drawing.Point(255, 468);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 41);
-            this.button23.TabIndex = 22;
-            this.button23.Text = "+";
-            this.button23.UseVisualStyleBackColor = true;
+            this.bOsszeadas.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bOsszeadas.Location = new System.Drawing.Point(255, 468);
+            this.bOsszeadas.Name = "bOsszeadas";
+            this.bOsszeadas.Size = new System.Drawing.Size(75, 41);
+            this.bOsszeadas.TabIndex = 22;
+            this.bOsszeadas.Text = "+";
+            this.bOsszeadas.UseVisualStyleBackColor = true;
+            this.bOsszeadas.Click += new System.EventHandler(this.bOsszeadas_Click);
             // 
-            // button24
+            // bEgyenlo
             // 
-            this.button24.Enabled = false;
-            this.button24.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button24.Location = new System.Drawing.Point(255, 515);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(75, 41);
-            this.button24.TabIndex = 23;
-            this.button24.Text = "=";
-            this.button24.UseVisualStyleBackColor = true;
+            this.bEgyenlo.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bEgyenlo.Location = new System.Drawing.Point(255, 515);
+            this.bEgyenlo.Name = "bEgyenlo";
+            this.bEgyenlo.Size = new System.Drawing.Size(75, 41);
+            this.bEgyenlo.TabIndex = 23;
+            this.bEgyenlo.Text = "=";
+            this.bEgyenlo.UseVisualStyleBackColor = true;
+            this.bEgyenlo.Click += new System.EventHandler(this.bEgyenlo_Click);
             // 
             // textBox1
             // 
@@ -347,11 +347,11 @@ namespace Szamologep
             this.ClientSize = new System.Drawing.Size(346, 572);
             this.Controls.Add(this.txtErtek);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button24);
-            this.Controls.Add(this.button23);
-            this.Controls.Add(this.button22);
-            this.Controls.Add(this.button21);
-            this.Controls.Add(this.button20);
+            this.Controls.Add(this.bEgyenlo);
+            this.Controls.Add(this.bOsszeadas);
+            this.Controls.Add(this.bKivonas);
+            this.Controls.Add(this.bSzorzas);
+            this.Controls.Add(this.bOsztas);
             this.Controls.Add(this.bGyokX);
             this.Controls.Add(this.bXNegyzet);
             this.Controls.Add(this.bEgyPerX);
@@ -401,11 +401,11 @@ namespace Szamologep
         private System.Windows.Forms.Button bEgyPerX;
         private System.Windows.Forms.Button bXNegyzet;
         private System.Windows.Forms.Button bGyokX;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button bOsztas;
+        private System.Windows.Forms.Button bSzorzas;
+        private System.Windows.Forms.Button bKivonas;
+        private System.Windows.Forms.Button bOsszeadas;
+        private System.Windows.Forms.Button bEgyenlo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtErtek;
     }

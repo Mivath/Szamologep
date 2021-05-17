@@ -11,6 +11,8 @@ namespace Szamologep.Lib
 
         private bool _vanTizedes = false;
         private bool _ezEredmeny = false;
+        private double _operandus1;
+        private Binaris _muvelet;
         public string Ertek { get; private set; }
         public double ValosErtek => double.Parse(Ertek);
 
@@ -48,9 +50,34 @@ namespace Szamologep.Lib
             }
         }
 
+        public void Egyenlo()
+        {
+            switch (_muvelet)
+            {
+                case Binaris.Osszead:
+                    Ertek = $"{_operandus1 + ValosErtek}";
+                    break;
+                case Binaris.Kivon:
+                    Ertek = $"{_operandus1 - ValosErtek}";
+                    break;
+                case Binaris.Szoroz:
+                    Ertek = $"{_operandus1 * ValosErtek}";
+                    break;
+                case Binaris.Oszt:
+                    Ertek = $"{_operandus1 / ValosErtek}";
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+            _ezEredmeny = true;
+        }
+
         public void Be(Binaris be)
         {
-
+            _operandus1 = ValosErtek;
+            _muvelet = be;
+            _ezEredmeny = true;
+            _vanTizedes = false;
         }
         public void Tizedes()
         {

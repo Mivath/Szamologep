@@ -6,5 +6,7 @@
         GyokX,
         XNegyzet,
         Negacio,
+        Szazalek,
+        //todo szazalek
     }
 }

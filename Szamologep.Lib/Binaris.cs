@@ -6,6 +6,5 @@
         Kivon,
         Szoroz,
         Oszt,
-        Szazalek,
     }
 }
