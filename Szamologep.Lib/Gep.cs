@@ -38,13 +38,13 @@ namespace Szamologep.Lib
         }
 
         private bool _vanTizedes = false;
+        private bool _ezEredmeny = false;
         public string Ertek { get; private set; }
         public double ValosErtek => double.Parse(Ertek);
 
-
         public void Be(Szamjegyek be)
         {
-            if (ValosErtek == 0 && !_vanTizedes)
+            if ((ValosErtek == 0 && !_vanTizedes) || _ezEredmeny)
                 Ertek = $"{(int)be}";
             else
                 Ertek = $"{Ertek}{(int)be}";
@@ -56,15 +56,19 @@ namespace Szamologep.Lib
             {
                 case Unaris.EgyPerX:
                     Ertek = $"{1 / ValosErtek}";
+                    _ezEredmeny = true;
                     break;
                 case Unaris.GyokX:
                     Ertek = $"{Math.Sqrt(ValosErtek)}";
+                    _ezEredmeny = true;
                     break;
                 case Unaris.XNegyzet:
                     Ertek = $"{ValosErtek * ValosErtek}";
+                    _ezEredmeny = true;
                     break;
                 case Unaris.Negacio:
                     Ertek = $"{-ValosErtek}";
+                    _ezEredmeny = true;
                     break;
                 default:
                     throw new NotImplementedException();
@@ -87,6 +91,9 @@ namespace Szamologep.Lib
 
         public void Vissza()
         {
+            if (_ezEredmeny)
+                return; //nincs hatasa
+
             if (Ertek.Length == 1)
                 Ertek = "0";
             else
@@ -97,6 +104,7 @@ namespace Szamologep.Lib
         {
             Ertek = "0";
             _vanTizedes = false;
+            _ezEredmeny = false;
         }
     }
 }

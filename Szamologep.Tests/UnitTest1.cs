@@ -31,6 +31,9 @@ namespace Szamologep.Tests
 
             gep.Be(Unaris.EgyPerX);
             Assert.AreEqual("0.5", gep.Ertek);
+
+            gep.Be(Szamjegyek.Szj_1);
+            Assert.AreEqual("1", gep.Ertek);
         }
         [TestMethod]
         public void Be_Unaris_XNegyzet()
@@ -40,6 +43,9 @@ namespace Szamologep.Tests
 
             gep.Be(Unaris.XNegyzet);
             Assert.AreEqual("4", gep.Ertek);
+
+            gep.Be(Szamjegyek.Szj_1);
+            Assert.AreEqual("1", gep.Ertek);
         }
         [TestMethod]
         public void Be_Unaris_Negacio()
@@ -49,6 +55,9 @@ namespace Szamologep.Tests
 
             gep.Be(Unaris.Negacio);
             Assert.AreEqual("-2", gep.Ertek);
+
+            gep.Be(Szamjegyek.Szj_1);
+            Assert.AreEqual("1", gep.Ertek);
         }
         [TestMethod]
         public void Be_Unaris_GyokX()
@@ -58,6 +67,9 @@ namespace Szamologep.Tests
 
             gep.Be(Unaris.GyokX);
             Assert.AreEqual("2", gep.Ertek);
+
+            gep.Be(Szamjegyek.Szj_1);
+            Assert.AreEqual("1", gep.Ertek);
         }
         [TestMethod]
         public void Be_Unaris_EgyPer0()
@@ -120,6 +132,15 @@ namespace Szamologep.Tests
             gep.Vissza();
             Assert.AreEqual("0", gep.Ertek);
         }
+        [TestMethod]
+        public void Vissza_Eredmeny_Utan()
+        {
+            var gep = new Gep();
+            gep.Be(Szamjegyek.Szj_2);
+            gep.Be(Unaris.EgyPerX);
+            gep.Vissza();
+            Assert.AreEqual("0.5", gep.Ertek);
+        }
         //[TestMethod]
         //public void Plusz()
         //{
@@ -148,6 +169,17 @@ namespace Szamologep.Tests
             gep.CE();
             gep.Be(Szamjegyek.Szj_3);
             Assert.AreEqual("3", gep.Ertek);
+        }
+        [TestMethod]
+        public void FullTorlesUtanSzamjegyekBeirasa()
+        {
+            var gep = new Gep();
+            gep.Be(Szamjegyek.Szj_1);
+            gep.Be(Unaris.EgyPerX); //ettol eredmeny lesz
+            gep.CE();
+            gep.Be(Szamjegyek.Szj_2);
+            gep.Be(Szamjegyek.Szj_3);
+            Assert.AreEqual("23", gep.Ertek);
         }
     }
 }
