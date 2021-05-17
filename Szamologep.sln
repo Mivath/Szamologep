@@ -13,7 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Szamologep.Lib", "Szamologep.Lib\Szamologep.Lib.csproj", "{09B4AEA1-74B9-4894-8BC6-BE069DB13701}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bongeszoben", "Bongeszoben\Bongeszoben.csproj", "{78CE12B2-5763-406F-878A-6AFB065B87CD}"
 EndProject

@@ -30,34 +30,34 @@
         <td><button class="btn btn-secondary" @onclick="vissza">&lArr;</button></td>
     </tr>
     <tr>
-        <td><button class="btn btn-secondary" @onclick="()=>unaris(Unaris.EgyPerX)">1/x</button></td>
-        <td><button class="btn btn-secondary" @onclick="()=>unaris(Unaris.XNegyzet)">x*x</button></td>
-        <td><button class="btn btn-secondary" @onclick="()=>unaris(Unaris.GyokX)">sqrt(x)</button></td>
-        <td><button class="btn btn-secondary">/</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => unaris(Unaris.EgyPerX)">1/x</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => unaris(Unaris.XNegyzet)">x*x</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => unaris(Unaris.GyokX)">sqrt(x)</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => binaris(Binaris.Oszt)">/</button></td>
     </tr>
     <tr>
-        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_7)">7</button></td>
-        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_8)">8</button></td>
-        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_9)">9</button></td>
-        <td><button class="btn btn-secondary">x</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => szamjegy(Szamjegyek.Szj_7)">7</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => szamjegy(Szamjegyek.Szj_8)">8</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => szamjegy(Szamjegyek.Szj_9)">9</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => binaris(Binaris.Szoroz)">x</button></td>
     </tr>
     <tr>
-        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_4)">4</button></td>
-        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_5)">5</button></td>
-        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_6)">6</button></td>
-        <td><button class="btn btn-secondary">-</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => szamjegy(Szamjegyek.Szj_4)">4</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => szamjegy(Szamjegyek.Szj_5)">5</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => szamjegy(Szamjegyek.Szj_6)">6</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => binaris(Binaris.Kivon)">-</button></td>
     </tr>
     <tr>
-        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_1)">1</button></td>
-        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_2)">2</button></td>
-        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_3)">3</button></td>
-        <td><button class="btn btn-secondary">+</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => szamjegy(Szamjegyek.Szj_1)">1</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => szamjegy(Szamjegyek.Szj_2)">2</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => szamjegy(Szamjegyek.Szj_3)">3</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => binaris(Binaris.Osszead)">+</button></td>
     </tr>
     <tr>
-        <td><button class="btn btn-secondary" @onclick="()=>unaris(Unaris.Negacio)">+/-</button></td>
-        <td><button class="btn btn-secondary" @onclick="()=>szamjegy(Szamjegyek.Szj_0)">0</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => unaris(Unaris.Negacio)">+/-</button></td>
+        <td><button class="btn btn-secondary" @onclick="() => szamjegy(Szamjegyek.Szj_0)">0</button></td>
         <td><button class="btn btn-secondary" @onclick="tizedes">.</button></td>
-        <td><button class="btn btn-secondary">=</button></td>
+        <td><button class="btn btn-secondary" @onclick="egyenlo">=</button></td>
     </tr>
 </table>
 
@@ -76,6 +76,10 @@
     {
         _gep.Be(op);
     }
+    private void binaris(Binaris op)
+    {
+        _gep.Be(op);
+    }
     private void tizedes()
     {
         _gep.Tizedes();
@@ -83,5 +87,9 @@
     private void vissza()
     {
         _gep.Vissza();
+    }
+    private void egyenlo()
+    {
+        _gep.Egyenlo();
     }
 }
