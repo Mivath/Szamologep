@@ -181,5 +181,34 @@ namespace Szamologep.Tests
             gep.Be(Szamjegyek.Szj_3);
             Assert.AreEqual("23", gep.Ertek);
         }
+        [TestMethod]
+        public void OperatorokUtaniEredmeny()
+        {
+            var gep = new Gep();
+            gep.Be(Szamjegyek.Szj_2);
+            gep.Be(Unaris.EgyPerX);
+            gep.Be(Szamjegyek.Szj_4);
+            gep.Be(Szamjegyek.Szj_4);
+            Assert.AreEqual("44", gep.Ertek);
+        }
+        [TestMethod]
+        public void EredmenyDuplaTizedes()
+        {
+            var gep = new Gep();
+            gep.Be(Szamjegyek.Szj_2);
+            gep.Be(Unaris.EgyPerX);
+            gep.Tizedes();
+            Assert.AreEqual("0.", gep.Ertek);
+        }
+        [TestMethod]
+        public void EredmenyTizedessel()
+        {
+            var gep = new Gep();
+            gep.Be(Szamjegyek.Szj_2);
+            gep.Be(Unaris.EgyPerX);
+            gep.Tizedes();
+            gep.Be(Szamjegyek.Szj_2);
+            Assert.AreEqual("0.2", gep.Ertek);
+        }
     }
 }

@@ -48,6 +48,7 @@ namespace Szamologep.Lib
                 Ertek = $"{(int)be}";
             else
                 Ertek = $"{Ertek}{(int)be}";
+            _ezEredmeny = false;
         }
 
         public void Be(Unaris be)
@@ -81,6 +82,12 @@ namespace Szamologep.Lib
         }
         public void Tizedes()
         {
+            if (_ezEredmeny)
+            {
+                Ertek = "0";
+                _ezEredmeny = false;
+            }
+            
             if (_vanTizedes)
                 return;
 
