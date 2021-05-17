@@ -210,5 +210,15 @@ namespace Szamologep.Tests
             gep.Be(Szamjegyek.Szj_2);
             Assert.AreEqual("0.2", gep.Ertek);
         }
+        [TestMethod]
+        public void TortszamNegyzete()
+        {
+            var gep = new Gep();
+            gep.Tizedes();
+            gep.Be(Szamjegyek.Szj_2);
+            gep.Be(Unaris.XNegyzet);
+            //todo megoldani
+            //Assert.AreEqual("0.04", gep.Ertek);
+        }
     }
 }
