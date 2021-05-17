@@ -5,7 +5,7 @@ using Szamologep.Lib;
 namespace Szamologep.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class Tesztek1
     {
         [TestMethod]
         public void Alapertek0()
