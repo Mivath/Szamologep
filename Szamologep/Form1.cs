@@ -125,5 +125,35 @@ namespace Szamologep
             _gep.CE();
             kiir();
         }
+
+        private void bOsztas_Click(object sender, EventArgs e)
+        {
+            _gep.Be(Binaris.Oszt);
+            kiir();
+        }
+
+        private void bSzorzas_Click(object sender, EventArgs e)
+        {
+            _gep.Be(Binaris.Szoroz);
+            kiir();
+        }
+
+        private void bKivonas_Click(object sender, EventArgs e)
+        {
+            _gep.Be(Binaris.Kivon);
+            kiir();
+        }
+
+        private void bOsszeadas_Click(object sender, EventArgs e)
+        {
+            _gep.Be(Binaris.Osszead);
+            kiir();
+        }
+
+        private void bEgyenlo_Click(object sender, EventArgs e)
+        {
+            _gep.Egyenlo();
+            kiir();
+        }
     }
 }

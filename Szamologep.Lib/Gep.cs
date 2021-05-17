@@ -2,34 +2,6 @@
 
 namespace Szamologep.Lib
 {
-    public enum Szamjegyek
-    {
-        Szj_0 = 0,
-        Szj_1 = 1,
-        Szj_2 = 2,
-        Szj_3 = 3,
-        Szj_4 = 4,
-        Szj_5 = 5,
-        Szj_6 = 6,
-        Szj_7 = 7,
-        Szj_8 = 8,
-        Szj_9 = 9,
-    }
-    public enum Unaris
-    {
-        EgyPerX,
-        GyokX,
-        XNegyzet,
-        Negacio,
-    }
-    public enum Binaris
-    {
-        Osszead,
-        Kivon,
-        Szoroz,
-        Oszt,
-        Szazalek,
-    }
     public class Gep
     {
         public Gep()
@@ -38,16 +10,19 @@ namespace Szamologep.Lib
         }
 
         private bool _vanTizedes = false;
+        private bool _ezEredmeny = false;
+        private double _operandus1;
+        private Binaris _muvelet;
         public string Ertek { get; private set; }
         public double ValosErtek => double.Parse(Ertek);
 
-
         public void Be(Szamjegyek be)
         {
-            if (ValosErtek == 0 && !_vanTizedes)
+            if ((ValosErtek == 0 && !_vanTizedes) || _ezEredmeny)
                 Ertek = $"{(int)be}";
             else
                 Ertek = $"{Ertek}{(int)be}";
+            _ezEredmeny = false;
         }
 
         public void Be(Unaris be)
@@ -56,27 +31,62 @@ namespace Szamologep.Lib
             {
                 case Unaris.EgyPerX:
                     Ertek = $"{1 / ValosErtek}";
+                    _ezEredmeny = true;
                     break;
                 case Unaris.GyokX:
                     Ertek = $"{Math.Sqrt(ValosErtek)}";
+                    _ezEredmeny = true;
                     break;
                 case Unaris.XNegyzet:
                     Ertek = $"{ValosErtek * ValosErtek}";
+                    _ezEredmeny = true;
                     break;
                 case Unaris.Negacio:
                     Ertek = $"{-ValosErtek}";
+                    _ezEredmeny = true;
                     break;
                 default:
                     throw new NotImplementedException();
             }
         }
 
+        public void Egyenlo()
+        {
+            switch (_muvelet)
+            {
+                case Binaris.Osszead:
+                    Ertek = $"{_operandus1 + ValosErtek}";
+                    break;
+                case Binaris.Kivon:
+                    Ertek = $"{_operandus1 - ValosErtek}";
+                    break;
+                case Binaris.Szoroz:
+                    Ertek = $"{_operandus1 * ValosErtek}";
+                    break;
+                case Binaris.Oszt:
+                    Ertek = $"{_operandus1 / ValosErtek}";
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+            _ezEredmeny = true;
+        }
+
         public void Be(Binaris be)
         {
-
+            _operandus1 = ValosErtek;
+            _muvelet = be;
+            _ezEredmeny = true;
+            _vanTizedes = false;
         }
         public void Tizedes()
         {
+            if (_ezEredmeny)
+            {
+                Ertek = "0";
+                _ezEredmeny = false;
+            }
+            
             if (_vanTizedes)
                 return;
 
@@ -87,6 +97,9 @@ namespace Szamologep.Lib
 
         public void Vissza()
         {
+            if (_ezEredmeny)
+                return; //nincs hatasa
+
             if (Ertek.Length == 1)
                 Ertek = "0";
             else
@@ -97,6 +110,7 @@ namespace Szamologep.Lib
         {
             Ertek = "0";
             _vanTizedes = false;
+            _ezEredmeny = false;
         }
     }
 }
