@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Szamologep", "Szamologep\Sz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Szamologep.Tests", "Szamologep.Tests\Szamologep.Tests.csproj", "{FA169223-405E-4CA9-AC46-88A3A1555A59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Szamologep.Lib", "Szamologep.Lib\Szamologep.Lib.csproj", "{09B4AEA1-74B9-4894-8BC6-BE069DB13701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Szamologep.Lib", "Szamologep.Lib\Szamologep.Lib.csproj", "{09B4AEA1-74B9-4894-8BC6-BE069DB13701}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D87C1259-E700-4082-9B98-1EE81F52EAF1}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
