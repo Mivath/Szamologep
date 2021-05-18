@@ -155,5 +155,11 @@ namespace Szamologep
             _gep.Egyenlo();
             kiir();
         }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            _gep.Be(Unaris.Szazalek);
+            kiir();
+        }
     }
 }

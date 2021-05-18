@@ -220,5 +220,14 @@ namespace Szamologep.Tests
             //todo megoldani
             //Assert.AreEqual("0.04", gep.Ertek);
         }
+        [TestMethod]
+        public void Szazalek()
+        {
+            var gep = new Gep();
+            gep.Be(Szamjegyek.Szj_8);
+            gep.Be(Szamjegyek.Szj_5);
+            gep.Be(Unaris.Szazalek);
+            Assert.AreEqual("0.85", gep.Ertek);
+        }
     }
 }

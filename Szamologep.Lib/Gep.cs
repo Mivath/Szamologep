@@ -45,6 +45,10 @@ namespace Szamologep.Lib
                     Ertek = $"{-ValosErtek}";
                     _ezEredmeny = true;
                     break;
+                case Unaris.Szazalek:
+                    Ertek = $"{ValosErtek / 100}";
+                    _ezEredmeny = true;
+                    break;
                 default:
                     throw new NotImplementedException();
             }
