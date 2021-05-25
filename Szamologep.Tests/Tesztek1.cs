@@ -229,5 +229,18 @@ namespace Szamologep.Tests
             gep.Be(Unaris.Szazalek);
             Assert.AreEqual("0.85", gep.Ertek);
         }
+        [TestMethod]
+        public void CTeljesTorles()
+        {
+            var gep = new Gep();
+            gep.Be(Szamjegyek.Szj_8);
+            gep.Be(Szamjegyek.Szj_5);
+            gep.Be(Binaris.Osszead);
+            gep.Be(Szamjegyek.Szj_8);
+            gep.Be(Szamjegyek.Szj_5);
+            gep.C();
+            gep.Be(Szamjegyek.Szj_5);
+            Assert.AreEqual("5", gep.Ertek);
+        }
     }
 }

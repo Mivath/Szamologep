@@ -116,5 +116,13 @@ namespace Szamologep.Lib
             _vanTizedes = false;
             _ezEredmeny = false;
         }
+
+        public void C()
+        {
+            Ertek = "0";
+            _operandus1 = 0;
+            _vanTizedes = false;
+            _ezEredmeny = false;
+        }
     }
 }

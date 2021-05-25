@@ -202,7 +202,6 @@ namespace Szamologep
             // 
             // button14
             // 
-            this.button14.Enabled = false;
             this.button14.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button14.Location = new System.Drawing.Point(174, 280);
             this.button14.Name = "button14";
@@ -210,6 +209,7 @@ namespace Szamologep
             this.button14.TabIndex = 13;
             this.button14.Text = "C";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // bCE
             // 
